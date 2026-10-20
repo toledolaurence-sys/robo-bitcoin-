@@ -12,6 +12,7 @@ jobs:
       - name: Baixar o codigo do repositorio
         uses: actions/checkout@v4
 
+
       - name: Configurar o Python
         uses: actions/setup-python@v5
         with:

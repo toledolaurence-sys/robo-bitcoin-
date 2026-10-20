@@ -12,7 +12,6 @@ jobs:
       - name: Baixar o codigo do repositorio
         uses: actions/checkout@v4
 
-
       - name: Configurar o Python
         uses: actions/setup-python@v5
         with:
@@ -21,12 +20,10 @@ jobs:
       - name: Instalar dependencias
         run: pip install -r requirements.txt
 
-      - name: Executar o robo
+      - name: Executar o robô
         env:
-              - name: Executar o robô
-      env:
-        MB_API_KEY: ${{ secrets.MB_API_KEY }}
-        MB_API_SECRET: ${{ secrets.MB_API_SECRET }}
-        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      run: python main.py
+          MB_API_KEY: ${{ secrets.MB_API_KEY }}
+          MB_API_SECRET: ${{ secrets.MB_API_SECRET }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python main.py
